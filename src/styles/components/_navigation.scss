@@ -1,0 +1,46 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: $color-1;
+  border-radius: 0px 0px 55px 55px;
+
+  ul {
+    margin: 45px;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+      margin: 5px;
+    }
+
+    li {
+      display: flex;
+      font-size: 1.5em;
+      color: $color-3;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 220px;
+    align-items: stretch;
+    flex-direction: column;
+
+    img {
+      margin: auto;
+    }
+
+    ul {
+      flex-direction: column;
+      width: initial;
+      height: 190px;
+      border-radius: 0px;
+    }
+  }
+}

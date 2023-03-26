@@ -1,0 +1,66 @@
+.classement {
+  table {
+    @media screen and (max-width: 1023px) {
+      font-size: 1em;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 1em;
+
+      .hide {
+        display: none;
+      }
+    }
+
+    thead {
+      background-color: $color-1;
+      color: $color-3;
+      font-size: 1.1em;
+
+      th {
+        padding: 15px;
+        border-collapse: collapse;
+
+        &:nth-child(2) {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-left: 65px;
+        }
+
+        @media screen and (max-width: 1023px) {
+          padding: 5px;
+        }
+
+        @media screen and (max-width: 767px) {
+          padding: 0px;
+        }
+
+        &:hover {
+          font-weight: bolder;
+          cursor: pointer;
+        }
+      }
+    }
+
+    tbody {
+      td {
+        border-bottom: 1px solid $color-1;
+        padding: 15px;
+
+        &:nth-child(2) {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+        img {
+          width: auto;
+          height: 50px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

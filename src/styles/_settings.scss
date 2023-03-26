@@ -1,0 +1,60 @@
+@font-face {
+  font-family: font-1;
+  src: url(../styles/fonts/Alkatra-VariableFont_wght.ttf);
+}
+
+$color-1: #2faee0;
+$color-2: rgb(32, 32, 32);
+$color-3: #f7f2e7;
+$color-4: #f2f2f2;
+$color-5: #404040;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "font-1", sans-serif;
+  background-color: $color-4;
+}
+
+body li {
+  list-style: none;
+}
+
+body a {
+  color: $color-2;
+  text-decoration: none;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+  color: $color-5;
+}
+
+.tableau {
+  display: flex;
+  justify-content: center;
+
+  table {
+    text-align: center;
+    border-spacing: 0em;
+    border: 1px solid $color-1;
+    font-size: 1.2em;
+    width: 95%;
+  }
+}
+
+.textbold {
+  font-weight: bolder;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages {
+  margin-bottom: 100px;
+}

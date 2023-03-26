@@ -51,20 +51,20 @@ const Home = () => {
         <>
           <div className="prochainmatch">
             <p>Prochain Match :</p>
-            {data[29] ? (
+            {data[28] ? (
               <>
-                <p className="textbold">{data[29].journee}</p>
+                <p className="textbold">{data[28].journee}</p>
                 <div className="matchdate">
-                  <p>{data[29].date}</p>
-                  <p>{data[29].horaires}</p>
+                  <p>{data[28].date}</p>
+                  <p>{data[28].horaires}</p>
                 </div>
                 <div className="matchcontent">
                   <p className="textbold">
-                    {data[29].domicile ? "Marseille" : data[29].adversaire}
+                    {data[28].domicile ? "Marseille" : data[28].adversaire}
                   </p>
                   <p>Vs</p>
                   <p className="textbold">
-                    {data[29].domicile ? data[29].adversaire : "Marseille"}
+                    {data[28].domicile ? data[28].adversaire : "Marseille"}
                   </p>
                 </div>
               </>

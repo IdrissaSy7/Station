@@ -12,7 +12,7 @@
       padding: 0px;
       border: none;
       width: 100%;
-      font-size: 1em;
+      font-size: 1.1em;
     }
 
     tr:nth-child(even) {
@@ -28,8 +28,28 @@
       padding: 25px;
 
       @media screen and (max-width: 767px) {
-        padding: 25px 2px 25px 2px;
-        height: 50px;
+        padding: 45px 5px 0px 5px;
+        height: 120px;
+      }
+    }
+
+    tr {
+      position: relative;
+    }
+
+    .date {
+      @media screen and (max-width: 767px) {
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    .journee {
+      @media screen and (max-width: 767px) {
+        position: absolute;
+        top: 0;
+        left: 15px;
       }
     }
   }

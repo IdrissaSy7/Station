@@ -1,1 +1,239 @@
-/*# sourceMappingURL=index.css.map */
+@font-face {
+  font-family: font-1;
+  src: url(../styles/fonts/Alkatra-VariableFont_wght.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "font-1", sans-serif;
+  background-color: #f2f2f2;
+}
+
+body li {
+  list-style: none;
+}
+
+body a {
+  color: rgb(32, 32, 32);
+  text-decoration: none;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+  color: #404040;
+}
+
+.tableau {
+  display: flex;
+  justify-content: center;
+}
+.tableau table {
+  text-align: center;
+  border-spacing: 0em;
+  border: 1px solid #2faee0;
+  font-size: 1.2em;
+  width: 95%;
+}
+
+.textbold {
+  font-weight: bolder;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages {
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1023px) {
+  .classement table {
+    font-size: 1em;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .classement table {
+    font-size: 1.1em;
+  }
+  .classement table .hide {
+    display: none;
+  }
+}
+.classement table thead {
+  background-color: #2faee0;
+  color: #f7f2e7;
+  font-size: 1.1em;
+}
+.classement table thead th {
+  padding: 15px;
+  border-collapse: collapse;
+}
+.classement table thead th:nth-child(2) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 65px;
+}
+@media screen and (max-width: 1023px) {
+  .classement table thead th {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .classement table thead th {
+    padding: 0px;
+  }
+}
+.classement table thead th:hover {
+  font-weight: bolder;
+  cursor: pointer;
+}
+.classement table tbody td {
+  border-bottom: 1px solid #2faee0;
+  padding: 15px;
+}
+.classement table tbody td:nth-child(2) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.classement table tbody td img {
+  width: auto;
+  height: 50px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .calendrier {
+    font-size: 1em;
+  }
+}
+.calendrier table {
+  background-color: #2faee0;
+  padding: 10px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .calendrier table {
+    padding: 0px;
+    border: none;
+    width: 100%;
+    font-size: 1.1em;
+  }
+}
+.calendrier table tr:nth-child(even) {
+  background-color: #2faee0;
+  color: #f7f2e7;
+}
+.calendrier table tr:nth-child(odd) {
+  background-color: #f7f2e7;
+}
+.calendrier table td {
+  padding: 25px;
+}
+@media screen and (max-width: 767px) {
+  .calendrier table td {
+    padding: 45px 5px 0px 5px;
+    height: 120px;
+  }
+}
+.calendrier table tr {
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .calendrier table .date {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .calendrier table .journee {
+    position: absolute;
+    top: 0;
+    left: 15px;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: #2faee0;
+  border-radius: 0px 0px 55px 55px;
+}
+.navigation ul {
+  margin: 45px;
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .navigation ul {
+    margin: 5px;
+  }
+}
+.navigation ul li {
+  display: flex;
+  font-size: 1.5em;
+  color: #f7f2e7;
+}
+.navigation ul li:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+  .navigation {
+    height: 220px;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .navigation img {
+    margin: auto;
+  }
+  .navigation ul {
+    flex-direction: column;
+    width: initial;
+    height: 190px;
+    border-radius: 0px;
+  }
+}
+
+.prochainmatch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 5px solid #2faee0;
+  border-bottom: 5px solid #2faee0;
+  font-size: 1.3em;
+  color: #404040;
+}
+@media screen and (max-width: 767px) {
+  .prochainmatch {
+    font-size: 1.1em;
+  }
+}
+.prochainmatch .matchdate {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+.prochainmatch .matchcontent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 320px;
+  font-size: 1.2em;
+}
+@media screen and (max-width: 767px) {
+  .prochainmatch .matchcontent {
+    width: 85%;
+  }
+}/*# sourceMappingURL=index.css.map */

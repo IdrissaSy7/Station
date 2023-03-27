@@ -58,8 +58,8 @@ const Calendrier = () => {
                 <tbody>
                   {data.map((p, index) => (
                     <tr key={index}>
-                      <td>{p.journee}</td>
-                      <td>{p.date}</td>
+                      <td className="journee">{p.journee}</td>
+                      <td className="date">{p.date}</td>
                       {p.domicile === true ? (
                         <>
                           <td className="textbold">Marseille</td>

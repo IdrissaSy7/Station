@@ -8,6 +8,10 @@
   font-size: 1.3em;
   color: $color-5;
 
+  @media screen and (max-width: 767px) {
+    font-size: 1.1em;
+  }
+
   .matchdate {
     display: flex;
     justify-content: space-around;
@@ -18,7 +22,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 300px;
+    width: 320px;
     font-size: 1.2em;
+
+    @media screen and (max-width: 767px) {
+      width: 85%;
+    }
   }
 }

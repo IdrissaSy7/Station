@@ -4,7 +4,6 @@ import { Triangle } from "react-loader-spinner";
 
 const Classement = () => {
   const [data, setData] = useState([]);
-  const [sortOrder, setSortOrder] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -22,22 +21,6 @@ const Classement = () => {
         console.error(error);
       });
   }, []);
-
-  const handleSort = (column) => {
-    const sortedData = [...data];
-    if (sortOrder === column) {
-      sortedData.reverse();
-      setSortOrder(`-${column}`);
-    } else {
-      if (column === "nom") {
-        sortedData.sort((a, b) => a[column].localeCompare(b[column]));
-      } else {
-        sortedData.sort((a, b) => b[column] - a[column]);
-      }
-      setSortOrder(column);
-    }
-    setData(sortedData);
-  };
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -60,7 +43,7 @@ const Classement = () => {
             wrapperStyle={{}}
             wrapperClassName=""
             visible={true}
-          />{" "}
+          />
         </div>
       ) : (
         <>
@@ -69,53 +52,23 @@ const Classement = () => {
               <table>
                 <thead>
                   <tr>
-                    <th onClick={() => handleSort("position")}>Pos.</th>
-                    <th onClick={() => handleSort("nom")}>Clubs</th>
-                    <th onClick={() => handleSort("matchs_joues")}>MJ</th>
-                    <th
-                      onClick={() => handleSort("matchs_gagnes")}
-                      className="hide"
-                    >
-                      G
-                    </th>
-                    <th
-                      onClick={() => handleSort("matchs_nuls")}
-                      className="hide"
-                    >
-                      N
-                    </th>
-                    <th
-                      onClick={() => handleSort("matchs_perdus")}
-                      className="hide"
-                    >
-                      P
-                    </th>
-                    <th
-                      onClick={() => handleSort("buts_marques")}
-                      className="hide"
-                    >
-                      BM
-                    </th>
-                    <th
-                      onClick={() => handleSort("buts_encaisses")}
-                      className="hide"
-                    >
-                      BE
-                    </th>
-                    <th
-                      onClick={() => handleSort("difference_de_buts")}
-                      className="hide"
-                    >
-                      DB
-                    </th>
-                    <th onClick={() => handleSort("points")}>Pts.</th>
+                    <th>Pos.</th>
+                    <th>Clubs</th>
+                    <th>MJ</th>
+                    <th className="hide">G</th>
+                    <th className="hide">N</th>
+                    <th className="hide">P</th>
+                    <th className="hide">BM</th>
+                    <th className="hide">BE</th>
+                    <th className="hide">DB</th>
+                    <th>Pts.</th>
                   </tr>
                 </thead>
 
                 <tbody>
                   {data.map((team, index) => (
                     <tr key={index}>
-                      <td>{team.position}</td>
+                      <td>{index + 1}</td>
                       <td>
                         <img src={team.cover} alt="cover" />
                         {team.nom}

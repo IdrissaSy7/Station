@@ -39,12 +39,29 @@
 
         &:hover {
           font-weight: bolder;
-          cursor: pointer;
         }
       }
     }
 
     tbody {
+      tr:nth-child(1) td:nth-child(1) {
+        border-left: 10px solid $color-6;
+      }
+
+      tr:nth-child(2) td:nth-child(1),
+      tr:nth-child(3) td:nth-child(1),
+      tr:nth-child(4) td:nth-child(1),
+      tr:nth-child(5) td:nth-child(1) {
+        border-left: 10px solid $color-7;
+      }
+
+      tr:nth-child(17) td:nth-child(1),
+      tr:nth-child(18) td:nth-child(1),
+      tr:nth-child(19) td:nth-child(1),
+      tr:nth-child(20) td:nth-child(1) {
+        border-left: 10px solid $color-8;
+      }
+
       td {
         border-bottom: 1px solid $color-1;
         padding: 15px;

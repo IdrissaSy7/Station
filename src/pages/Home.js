@@ -51,20 +51,26 @@ const Home = () => {
         <>
           <div className="prochainmatch">
             <p>Prochain Match :</p>
-            {data[29] ? (
+            {data[0].nextmatchindex ? (
               <>
-                <p className="textbold">{data[29].journee}</p>
+                <p className="textbold">
+                  {data[data[0].nextmatchindex].journee}
+                </p>
                 <div className="matchdate">
-                  <p>{data[29].date}</p>
-                  <p>{data[29].horaires}</p>
+                  <p>{data[data[0].nextmatchindex].date}</p>
+                  <p>{data[data[0].nextmatchindex].horaires}</p>
                 </div>
                 <div className="matchcontent">
                   <p className="textbold">
-                    {data[29].domicile ? "Marseille" : data[29].adversaire}
+                    {data[data[0].nextmatchindex].domicile
+                      ? "Marseille"
+                      : data[data[0].nextmatchindex].adversaire}
                   </p>
                   <p>Vs</p>
                   <p className="textbold">
-                    {data[29].domicile ? data[29].adversaire : "Marseille"}
+                    {data[data[0].nextmatchindex].domicile
+                      ? data[data[0].nextmatchindex].adversaire
+                      : "Marseille"}
                   </p>
                 </div>
               </>

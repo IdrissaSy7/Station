@@ -73,14 +73,22 @@ const Classement = () => {
                         <img src={team.cover} alt="cover" />
                         {team.nom}
                       </td>
-                      <td>{team.matchs_joues}</td>
+                      <td>
+                        {team.matchs_gagnes * 1 +
+                          team.matchs_nuls * 1 +
+                          team.matchs_perdus * 1}
+                      </td>
                       <td className="hide">{team.matchs_gagnes}</td>
                       <td className="hide">{team.matchs_nuls}</td>
                       <td className="hide">{team.matchs_perdus}</td>
                       <td className="hide">{team.buts_marques}</td>
                       <td className="hide">{team.buts_encaisses}</td>
-                      <td className="hide">{team.difference_de_buts}</td>
-                      <td className="textbold">{team.points}</td>
+                      <td className="hide">
+                        {team.buts_marques * 1 - team.buts_encaisses * 1}
+                      </td>
+                      <td className="textbold">
+                        {team.matchs_gagnes * 3 + team.matchs_nuls * 1}
+                      </td>
                     </tr>
                   ))}
                 </tbody>

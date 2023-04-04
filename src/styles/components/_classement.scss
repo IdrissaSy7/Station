@@ -60,8 +60,13 @@
       }
 
       td {
-        border-bottom: 1px solid $color-1;
+        border-bottom: 1px solid $color-2;
         padding: 15px;
+
+        &:nth-child(1),
+        &:nth-child(10) {
+          border: none;
+        }
 
         &:nth-child(2) {
           display: flex;

@@ -42,10 +42,8 @@ const Home = () => {
             width="180"
             color="#2faee0"
             ariaLabel="triangle-loading"
-            wrapperStyle={{}}
-            wrapperClassName=""
             visible={true}
-          />{" "}
+          />
         </div>
       ) : (
         <>

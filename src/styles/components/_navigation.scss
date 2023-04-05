@@ -48,6 +48,7 @@
   ul {
     display: flex;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 
     @media screen and (max-width: 767px) {
       background-color: $color-1;

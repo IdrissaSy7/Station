@@ -10,7 +10,7 @@ const Classement = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "https://classementligue1.vercel.app/classementl1",
+      url: "https://classementligue1.vercel.app/classementeuro",
     };
 
     axios
@@ -33,8 +33,7 @@ const Classement = () => {
 
   return (
     <div>
-      <h1 className="title">Classement Ligue 1</h1>
-
+      <h1 className="title">Classement LDC</h1>
       {isLoading ? (
         <div className="loader">
           <Triangle
@@ -69,7 +68,7 @@ const Classement = () => {
 
                 <tbody>
                   {data.map((team, index) => (
-                    <tr key={index} className="classement">
+                    <tr key={index} className="classementeuro">
                       <td>{index + 1}</td>
                       <td>
                         <img src={team.cover} alt="cover" />

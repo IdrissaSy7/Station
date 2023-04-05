@@ -17,19 +17,34 @@ const Navigation = () => {
           </li>
         </NavLink>
 
-        <NavLink to="/calendrier">
-          <li>
-            <i className="fa-regular fa-calendar-days"></i>
-            <span>Calendrier</span>
-          </li>
-        </NavLink>
+        <li>
+          <i className="fa-regular fa-calendar-days"></i>
+          <span>Calendrier</span>
+          <ul className="navactive" id="navactive1">
+            <NavLink to="/calendrier">
+              <li>Ligue 1</li>
+            </NavLink>
+            <NavLink to="/calendrierldc">
+              <li>Ligue des Champions</li>
+            </NavLink>
+            <NavLink to="/calendriercoupe">
+              <li>Coupe de France</li>
+            </NavLink>
+          </ul>
+        </li>
 
-        <NavLink to="/classement">
-          <li>
-            <i className="fa-solid fa-ranking-star"></i>
-            <span>Classement</span>
-          </li>
-        </NavLink>
+        <li>
+          <i className="fa-solid fa-ranking-star"></i>
+          <span>Classement</span>
+          <ul className="navactive" id="navactive2">
+            <NavLink to="/classement">
+              <li>Ligue 1</li>
+            </NavLink>
+            <NavLink to="/classementldc">
+              <li>Ligue des Champions</li>
+            </NavLink>
+          </ul>
+        </li>
       </ul>
     </div>
   );

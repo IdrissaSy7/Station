@@ -12,7 +12,7 @@ const Calendrier = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "https://classementligue1.vercel.app/calendrierl1",
+      url: "https://classementligue1.vercel.app/calendriereuro",
     };
 
     axios
@@ -37,7 +37,7 @@ const Calendrier = () => {
   return (
     <div>
       <Navigation />
-      <h1 className="title">Calendrier Ligue 1</h1>
+      <h1 className="title">Calendrier LDC</h1>
       {isLoading ? (
         <div className="loader">
           <Triangle

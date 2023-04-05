@@ -31,6 +31,7 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, []);
 
+  console.log(data);
   return (
     <div className="pages">
       <Navigation />
@@ -51,7 +52,7 @@ const Home = () => {
             <p>Prochain Match :</p>
             {data[0].nextmatchindex ? (
               <>
-                <p>{data[data[0].nextmatchindex].journee}</p>
+                <p>{data[data[0].nextmatchindex].journee} ème journée</p>
                 <div className="matchdate">
                   <p>{data[data[0].nextmatchindex].date}</p>
                   <p>{data[data[0].nextmatchindex].horaires}</p>

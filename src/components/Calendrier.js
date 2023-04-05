@@ -58,7 +58,7 @@ const Calendrier = () => {
                 <tbody>
                   {data.slice(1).map((p, index) => (
                     <tr key={index}>
-                      <td>J{index + 1}</td>
+                      <td>J{p.journee}</td>
                       <td className="date">{p.date}</td>
                       {p.domicile === true ? (
                         <>

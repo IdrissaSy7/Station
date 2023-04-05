@@ -31,7 +31,6 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  console.log(data);
   return (
     <div className="pages">
       <Navigation />

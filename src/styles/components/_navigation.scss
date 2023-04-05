@@ -48,6 +48,8 @@
   ul {
     display: flex;
     cursor: pointer;
+    height: 80px;
+    align-items: center;
 
     @media screen and (max-width: 767px) {
       background-color: $color-1;
@@ -58,6 +60,8 @@
       padding: 0;
       justify-content: space-around;
       width: 100%;
+      height: initial;
+      align-items: initial;
       font-size: 1.2em;
     }
 

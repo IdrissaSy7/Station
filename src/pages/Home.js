@@ -49,7 +49,7 @@ const Home = () => {
                   {data[data[0].nextmatchindex].ligue}
                 </p>
                 <div className="matchdate">
-                  <p>{data[data[0].nextmatchindex].date}</p>
+                  <p>{data[data[0].nextmatchindex].date}</p> -
                   <p>{data[data[0].nextmatchindex].horaires}</p>
                 </div>
                 <div className="matchcontent">

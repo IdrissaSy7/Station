@@ -6,7 +6,7 @@ const Navigation = () => {
     <div className="navigation">
       <div>
         <p>
-          <i className="fa-solid fa-futbol fa-spin"></i>M Station
+          <i className="fa-solid fa-futbol"></i>M Station
         </p>
       </div>
       <ul>

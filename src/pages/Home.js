@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navigation from "../components/Navigation";
-import { Triangle } from "react-loader-spinner";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -26,7 +25,7 @@ const Home = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 1200);
+    }, 800);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -37,13 +36,7 @@ const Home = () => {
       <h1 className="title">Accueil</h1>
       {isLoading ? (
         <div className="loader">
-          <Triangle
-            height="180"
-            width="180"
-            color="#2faee0"
-            ariaLabel="triangle-loading"
-            visible={true}
-          />
+          <i className="fa-solid fa-futbol fa-spin"></i>
         </div>
       ) : (
         <>

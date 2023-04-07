@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Triangle } from "react-loader-spinner";
-import { NavLink } from "react-router-dom";
 
 const Classement = () => {
   const [data, setData] = useState([]);
@@ -26,7 +24,7 @@ const Classement = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 1200);
+    }, 800);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -37,15 +35,7 @@ const Classement = () => {
 
       {isLoading ? (
         <div className="loader">
-          <Triangle
-            height="180"
-            width="180"
-            color="#2faee0"
-            ariaLabel="triangle-loading"
-            wrapperStyle={{}}
-            wrapperClassName=""
-            visible={true}
-          />
+          <i className="fa-solid fa-futbol fa-spin"></i>
         </div>
       ) : (
         <>

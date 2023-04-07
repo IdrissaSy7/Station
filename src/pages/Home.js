@@ -42,7 +42,7 @@ const Home = () => {
         <>
           <div className="prochainmatch">
             <p>Prochain Match :</p>
-            {data[0].nextmatchindex ? (
+            {data && data.length > 0 && data[0].nextmatchindex ? (
               <>
                 <p>
                   {data[data[0].nextmatchindex].journee} de{" "}

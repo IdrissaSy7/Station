@@ -19,10 +19,15 @@
       background-color: $color-1;
       color: $color-3;
       text-shadow: 0px 0px 2px $color-2;
+
+      a {
+        color: $color-3;
+      }
     }
 
     tr:nth-child(odd) {
       background-color: $color-3;
+      color: $color-2;
     }
 
     td {

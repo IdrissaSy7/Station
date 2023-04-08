@@ -52,6 +52,7 @@ const Home = () => {
                   <p>{data[data[0].nextmatchindex].date}</p> -
                   <p>{data[data[0].nextmatchindex].horaires}</p>
                 </div>
+                <p className="chaine">{[data[0].chaine]}</p>
                 <div className="matchcontent">
                   <p>
                     {data[data[0].nextmatchindex].domicile

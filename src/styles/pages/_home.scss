@@ -18,11 +18,16 @@
     height: 300px;
   }
 
+  .chaine {
+    margin-top: 0px;
+  }
+
   .matchdate {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 300px;
+    margin-top: -20px;
   }
 
   .matchcontent {

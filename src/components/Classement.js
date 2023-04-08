@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Classement = () => {
   const [data, setData] = useState([]);
@@ -32,7 +33,6 @@ const Classement = () => {
   return (
     <div>
       <h1 className="title">Classement Ligue 1</h1>
-
       {isLoading ? (
         <div className="loader">
           <i className="fa-solid fa-futbol fa-spin"></i>
@@ -62,8 +62,10 @@ const Classement = () => {
                     <tr key={index} className="classement">
                       <td>{index + 1}</td>
                       <td>
-                        <img src={team.cover} alt="cover" />
-                        {team.nom}
+                        <Link key={index} id={team.id} to={`/${team.id}`}>
+                          <img src={team.cover} alt="cover" />
+                          {team.nom}
+                        </Link>
                       </td>
                       <td>
                         {team.matchs_gagnes * 1 +

@@ -16,18 +16,11 @@ const Classement = () => {
       .request(options)
       .then(function (response) {
         setData(response.data);
+        setIsLoading(false);
       })
       .catch(function (error) {
         console.error(error);
       });
-  }, []);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-
-    return () => clearTimeout(timeout);
   }, []);
 
   return (

@@ -21,6 +21,7 @@ const Card = () => {
       .request(options)
       .then(function (response) {
         setData(response.data);
+        setIsLoading(false);
         if (response.data.backgroundColor) {
           setBackgroundColor(response.data.backgroundColor);
         }
@@ -37,17 +38,9 @@ const Card = () => {
     }
   }, [equipes]);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 600);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <div>
-      {equipes ? (
+      {!isLoading && equipes ? (
         <div className="card">
           <NavLink to="/classement">
             <i className="fa-solid fa-arrow-left"></i>
@@ -63,19 +56,11 @@ const Card = () => {
             <p>
               {equipes.stade} ({equipes.capacitestade} places){" "}
             </p>
-            {isLoading ? (
-              <div className="loader">
-                <i className="fa-solid fa-futbol fa-spin"></i>
-              </div>
-            ) : (
-              <>
-                <div className="coverstade">
-                  <p>
-                    <img src={equipes.coverstade} alt="logo equipe" />
-                  </p>
-                </div>
-              </>
-            )}
+            <div className="coverstade">
+              <p>
+                <img src={equipes.coverstade} alt="logo equipe" />
+              </p>
+            </div>
           </div>
           <div>
             <p className="teamimg">
@@ -83,7 +68,11 @@ const Card = () => {
             </p>
           </div>
         </div>
-      ) : null}
+      ) : (
+        <div className="loader">
+          <i className="fa-solid fa-futbol fa-spin"></i>
+        </div>
+      )}
     </div>
   );
 };

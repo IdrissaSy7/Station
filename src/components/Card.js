@@ -9,6 +9,7 @@ const Card = () => {
   const equipes = data.find((p) => p.id === id);
   const [backgroundColor, setBackgroundColor] = useState("white");
   const root = document.documentElement;
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const options = {
@@ -36,6 +37,14 @@ const Card = () => {
     }
   }, [equipes]);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 600);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <div>
       {equipes ? (
@@ -54,17 +63,23 @@ const Card = () => {
             <p>
               {equipes.stade} ({equipes.capacitestade} places){" "}
             </p>
-            <p>
-              <img src={equipes.coverstade} alt="logo equipe" />
-            </p>
+            {isLoading ? (
+              <div className="loader">
+                <i className="fa-solid fa-futbol fa-spin"></i>
+              </div>
+            ) : (
+              <>
+                <div className="coverstade">
+                  <p>
+                    <img src={equipes.coverstade} alt="logo equipe" />
+                  </p>
+                </div>
+              </>
+            )}
           </div>
           <div>
             <p className="teamimg">
-              <img
-                className="coverstade"
-                src={equipes.cover}
-                alt="logo equipe"
-              />
+              <img src={equipes.cover} alt="logo equipe" />
             </p>
           </div>
         </div>

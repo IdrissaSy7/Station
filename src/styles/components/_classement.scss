@@ -41,38 +41,49 @@
     }
 
     tbody {
-      tr:first-child td:nth-child(1) {
+      tr:first-child td:nth-child(1),
+      tr:nth-child(2) td:nth-child(1) {
         border-left: 10px solid $color-6;
       }
 
-      .classement:nth-child(2) td:nth-child(1),
-      .classement:nth-child(3) td:nth-child(1),
-      .classement:nth-child(4) td:nth-child(1),
-      .classement:nth-child(5) td:nth-child(1) {
+      tr:nth-child(3) td:nth-child(1) {
         border-left: 10px solid $color-7;
       }
 
-      .classement:nth-child(17) td:nth-child(1),
-      .classement:nth-child(18) td:nth-child(1),
-      .classement:nth-child(19) td:nth-child(1),
-      .classement:nth-child(20) td:nth-child(1) {
+      tr:nth-child(4) td:nth-child(1) {
+        border-left: 10px solid $color-11;
+      }
+
+      tr:nth-child(5) td:nth-child(1) {
+        border-left: 10px solid $color-12;
+      }
+
+      tr:nth-child(6) td:nth-child(1),
+      tr:nth-child(7) td:nth-child(1),
+      tr:nth-child(8) td:nth-child(1),
+      tr:nth-child(9) td:nth-child(1),
+      tr:nth-child(10) td:nth-child(1),
+      tr:nth-child(11) td:nth-child(1),
+      tr:nth-child(12) td:nth-child(1),
+      tr:nth-child(13) td:nth-child(1),
+      tr:nth-child(14) td:nth-child(1),
+      tr:nth-child(15) td:nth-child(1),
+      tr:nth-child(16) td:nth-child(1) {
+        border-left: 10px solid $color-3;
+      }
+
+      tr:nth-child(17) td:nth-child(1),
+      tr:nth-child(18) td:nth-child(1),
+      tr:nth-child(19) td:nth-child(1) {
+        border-left: 10px solid $color-8;
+      }
+
+      tr:last-child td:nth-child(1) {
         border-left: 10px solid $color-8;
       }
 
       tr:last-child td {
         border-bottom: none;
-      }
-
-      .classementeuro:nth-child(2) td:nth-child(1) {
-        border-left: 10px solid $color-6;
-      }
-
-      .classementeuro:nth-child(3) td:nth-child(1) {
-        border-left: 10px solid $color-7;
-      }
-
-      .classementeuro:nth-child(4) td:nth-child(1) {
-        border-left: 10px solid $color-8;
       }
 
       td {
@@ -102,6 +113,10 @@
           margin-right: 20px;
         }
       }
+    }
+
+    .classementeuro tr:nth-child(3) td:nth-child(1) {
+      border-left: 10px solid $color-11;
     }
   }
 }

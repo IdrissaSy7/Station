@@ -49,32 +49,49 @@ const Classement = () => {
                   </tr>
                 </thead>
 
-                <tbody>
-                  {data.map((team, index) => (
-                    <tr key={index} className="classementeuro">
-                      <td>{index + 1}</td>
-                      <td>
-                        <img src={team.cover} alt="cover" />
-                        {team.nom}
-                      </td>
-                      <td>
-                        {team.matchs_gagnes * 1 +
-                          team.matchs_nuls * 1 +
-                          team.matchs_perdus * 1}
-                      </td>
-                      <td className="hide">{team.matchs_gagnes}</td>
-                      <td className="hide">{team.matchs_nuls}</td>
-                      <td className="hide">{team.matchs_perdus}</td>
-                      <td className="hide">{team.buts_marques}</td>
-                      <td className="hide">{team.buts_encaisses}</td>
-                      <td className="hide">
-                        {team.buts_marques * 1 - team.buts_encaisses * 1}
-                      </td>
-                      <td className="textbold">
-                        {team.matchs_gagnes * 3 + team.matchs_nuls * 1}
-                      </td>
-                    </tr>
-                  ))}
+                <tbody className="classementeuro">
+                  {data
+                    .map((team, index) => (
+                      <tr key={index}>
+                        <td>{index + 1}</td>
+                        <td>
+                          <img src={team.cover} alt="cover" />
+                          {team.nom}
+                        </td>
+                        <td>
+                          {team.matchs_gagnes * 1 +
+                            team.matchs_nuls * 1 +
+                            team.matchs_perdus * 1}
+                        </td>
+                        <td className="hide">{team.matchs_gagnes}</td>
+                        <td className="hide">{team.matchs_nuls}</td>
+                        <td className="hide">{team.matchs_perdus}</td>
+                        <td className="hide">{team.buts_marques}</td>
+                        <td className="hide">{team.buts_encaisses}</td>
+                        <td className="hide">
+                          {team.buts_marques * 1 - team.buts_encaisses * 1}
+                        </td>
+                        <td className="textbold">
+                          {team.matchs_gagnes * 3 + team.matchs_nuls * 1}
+                        </td>
+                      </tr>
+                    ))
+                    .sort((a, b) => {
+                      return (
+                        // Points
+                        b.props.children[9].props.children -
+                          a.props.children[9].props.children ||
+                        // Différence buts
+                        b.props.children[8].props.children -
+                          a.props.children[8].props.children
+                      );
+                    })
+                    .map((team, index) => (
+                      <tr key={index}>
+                        <td>{index + 1}</td>
+                        {team.props.children.slice(1)}
+                      </tr>
+                    ))}
                 </tbody>
               </table>
             </div>

@@ -14,6 +14,11 @@ $color-8: red;
 $color-9: #1b94c4;
 $color-10: #00000047;
 
+:root {
+  --primary: #000000;
+  --secondary: #000000;
+}
+
 body {
   margin: 0;
   padding: 0;

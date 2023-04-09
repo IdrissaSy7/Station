@@ -78,6 +78,7 @@
       td {
         border-bottom: 1px solid $color-1;
         padding: 15px;
+        -webkit-tap-highlight-color: transparent;
 
         &:nth-child(1),
         &:nth-child(10) {

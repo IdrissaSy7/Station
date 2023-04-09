@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navigation from "./Navigation";
+import { Link } from "react-router-dom";
 
 const Calendrier = () => {
   const [data, setData] = useState([]);
@@ -43,19 +44,35 @@ const Calendrier = () => {
                       <td className="date">{p.date}</td>
                       {p.domicile === true ? (
                         <>
-                          <td className="textbold">Marseille</td>
+                          <td className="textbold">
+                            <Link key={index} id={p.id} to={`/10`}>
+                              Marseille
+                            </Link>
+                          </td>
                           <td>{p.score_equipe}</td>
                           <td>-</td>
                           <td>{p.score_adversaire}</td>
-                          <td>{p.adversaire}</td>
+                          <td>
+                            <Link key={index} id={p.id} to={`/${p.id}`}>
+                              {p.adversaire}
+                            </Link>
+                          </td>
                         </>
                       ) : (
                         <>
-                          <td>{p.adversaire}</td>
+                          <td>
+                            <Link key={index} id={p.id} to={`/${p.id}`}>
+                              {p.adversaire}
+                            </Link>
+                          </td>{" "}
                           <td>{p.score_adversaire}</td>
                           <td>-</td>
                           <td>{p.score_equipe}</td>
-                          <td className="textbold">Marseille</td>
+                          <td className="textbold">
+                            <Link key={index} id={p.id} to={`/10`}>
+                              Marseille
+                            </Link>
+                          </td>{" "}
                         </>
                       )}
                     </tr>

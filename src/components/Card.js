@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const Card = () => {
   const [data, setData] = useState([]);
   const { id } = useParams();
   const equipes = data.find((p) => p.id === id);
-  const [backgroundColor, setBackgroundColor] = useState("white");
   const root = document.documentElement;
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const options = {
@@ -22,9 +21,6 @@ const Card = () => {
       .then(function (response) {
         setData(response.data);
         setIsLoading(false);
-        if (response.data.backgroundColor) {
-          setBackgroundColor(response.data.backgroundColor);
-        }
       })
       .catch(function (error) {
         console.error(error);
@@ -42,10 +38,10 @@ const Card = () => {
     <div>
       {!isLoading && equipes ? (
         <div className="card">
-          <NavLink to="/classement">
+          <span onClick={() => navigate(-1)}>
             <i className="fa-solid fa-arrow-left"></i>
-          </NavLink>
-          <div>
+          </span>
+          <div className="cardcontent">
             <h1 className="title" id="teamname">
               {equipes.nom}{" "}
             </h1>
@@ -54,7 +50,7 @@ const Card = () => {
             <p>Président : {equipes.president}</p>
             <p>Entraîneur : {equipes.Entraineur}</p>
             <p>
-              {equipes.stade} ({equipes.capacitestade} places){" "}
+              Stade : {equipes.stade} ({equipes.capacitestade} places){" "}
             </p>
             <div className="coverstade">
               <p>

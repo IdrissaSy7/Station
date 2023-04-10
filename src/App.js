@@ -7,6 +7,7 @@ import Calendrier from "./pages/Calendrier";
 import Calendriereuro from "./pages/Calendriereuro";
 import Calendriercoupe from "./pages/Calendriercoupe";
 import Team from "./pages/Team";
+import Error from "./pages/Error";
 
 const App = () => {
   return (
@@ -19,6 +20,8 @@ const App = () => {
         <Route path="/classement" element={<Classement />} />
         <Route path="/classementldc" element={<Classementeuro />} />
         <Route path="/:id" element={<Team />} />
+        <Route path="/undefined" element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );

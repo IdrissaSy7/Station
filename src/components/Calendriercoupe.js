@@ -52,11 +52,19 @@ const Calendrier = () => {
                           <td>{p.score_equipe}</td>
                           <td>-</td>
                           <td>{p.score_adversaire}</td>
-                          <td>{p.adversaire}</td>
+                          <td>
+                            <Link key={index} id={p.id} to={`/${p.id}`}>
+                              {p.adversaire}
+                            </Link>
+                          </td>{" "}
                         </>
                       ) : (
                         <>
-                          <td>{p.adversaire}</td>
+                          <td>
+                            <Link key={index} id={p.id} to={`/${p.id}`}>
+                              {p.adversaire}
+                            </Link>
+                          </td>{" "}
                           <td>{p.score_adversaire}</td>
                           <td>-</td>
                           <td>{p.score_equipe}</td>

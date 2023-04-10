@@ -1,0 +1,46 @@
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $color-1;
+  text-align: center;
+
+  //   404
+  p:nth-child(1) {
+    font-size: 5em;
+    font-weight: bolder;
+  }
+
+  //   Texte
+  p:nth-child(2) {
+    font-size: 1.5em;
+  }
+
+  a {
+    color: $color-1;
+    list-style-type: none;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $color-1;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    p:nth-child(1) {
+      font-size: 4em;
+      margin-top: 50px;
+    }
+
+    p:nth-child(2) {
+      font-size: 1em;
+      width: 60%;
+    }
+
+    a {
+      margin: 50px 0px;
+    }
+  }
+}

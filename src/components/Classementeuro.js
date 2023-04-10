@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Classement = () => {
   const [data, setData] = useState([]);
@@ -55,8 +56,10 @@ const Classement = () => {
                       <tr key={index}>
                         <td>{index + 1}</td>
                         <td>
-                          <img src={team.cover} alt="cover" />
-                          {team.nom}
+                          <Link key={index} id={team.id} to={`/${team.id}`}>
+                            <img src={team.cover} alt="cover" />
+                            {team.nom}
+                          </Link>
                         </td>
                         <td>
                           {team.matchs_gagnes * 1 +

@@ -12,6 +12,10 @@
   margin-left: auto;
   margin-right: auto;
 
+  i {
+    margin-right: 15px;
+  }
+
   @media screen and (max-width: 767px) {
     font-size: 1.1em;
     width: 95%;
@@ -20,6 +24,8 @@
 
   .chaine {
     margin-top: 0px;
+    display: flex;
+    align-items: baseline;
   }
 
   .matchdate {

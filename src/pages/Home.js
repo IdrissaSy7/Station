@@ -34,7 +34,7 @@ const Home = () => {
       ) : (
         <>
           <div className="prochainmatch">
-            <p>Prochain Match :</p>
+            <h3>Prochain Match :</h3>
             {data && data.length > 0 && data[0].nextmatchindex ? (
               <>
                 <p>
@@ -45,7 +45,10 @@ const Home = () => {
                   <p>{data[data[0].nextmatchindex].date}</p> -
                   <p>{data[data[0].nextmatchindex].horaires}</p>
                 </div>
-                <p className="chaine">{[data[0].chaine]}</p>
+                <p className="chaine">
+                  <i class="fa-solid fa-tv"></i>
+                  {[data[0].chaine]}
+                </p>
                 <div className="matchcontent">
                   <p>
                     {data[data[0].nextmatchindex].domicile

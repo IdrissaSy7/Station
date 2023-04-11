@@ -10,7 +10,7 @@ const Calendrier = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "https://classementligue1.vercel.app/calendriercoupe",
+      url: "https://apiligue1.vercel.app/calendriercoupe",
     };
 
     axios

@@ -9,7 +9,7 @@ const Classement = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "https://apiligue1.vercel.app/classementeuro",
+      url: "https://apiligue1sy.vercel.app/classementeuro",
     };
 
     axios

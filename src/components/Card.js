@@ -13,7 +13,7 @@ const Card = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "https://apiligue1.vercel.app/teaminfos",
+      url: "https://apiligue1sy.vercel.app/teaminfos",
     };
 
     axios

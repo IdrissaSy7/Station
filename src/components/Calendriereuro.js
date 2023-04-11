@@ -10,7 +10,7 @@ const Calendrier = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "https://apiligue1.vercel.app/calendriereuro",
+      url: "https://apiligue1sy.vercel.app/calendriereuro",
     };
 
     axios

@@ -46,7 +46,7 @@ const Home = () => {
                   <p>{data[data[0].nextmatchindex].horaires}</p>
                 </div>
                 <p className="chaine">
-                  <i class="fa-solid fa-tv"></i>
+                  <i className="fa-solid fa-tv"></i>
                   {[data[0].chaine]}
                 </p>
                 <div className="matchcontent">

@@ -1,12 +1,12 @@
 .classement {
   table {
     @media screen and (max-width: 1023px) {
-      font-size: 1em;
+      font-size: 1rem;
       width: 100%;
     }
 
     @media screen and (max-width: 767px) {
-      font-size: 1.1em;
+      font-size: 1.1rem;
 
       .hide {
         display: none;
@@ -16,7 +16,7 @@
     thead {
       background-color: $color-1;
       color: $color-3;
-      font-size: 1.1em;
+      font-size: 1.1rem;
       text-shadow: 0px 0px 2px $color-2;
 
       th {

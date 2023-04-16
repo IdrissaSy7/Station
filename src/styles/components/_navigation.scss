@@ -25,7 +25,7 @@
 
   p,
   ul {
-    font-size: 1.7em;
+    font-size: 1.7rem;
     text-shadow: 0px 0px 3px $color-2;
   }
 
@@ -40,7 +40,7 @@
 
     @media screen and (max-width: 767px) {
       justify-content: center;
-      font-size: 1.8em;
+      font-size: 1.8rem;
       margin-left: 0px;
     }
   }
@@ -59,7 +59,7 @@
       padding: 0;
       justify-content: space-around;
       width: 100%;
-      font-size: 1.2em;
+      font-size: 1.2rem;
     }
 
     li {
@@ -95,7 +95,7 @@
       }
 
       .navactive {
-        font-size: 0.8em;
+        font-size: 1.3rem;
         color: $color-3;
         background-color: $color-1;
         padding: 0px;
@@ -119,7 +119,7 @@
         @media screen and (max-width: 767px) {
           top: initial;
           bottom: 80px;
-          font-size: 1.1em;
+          font-size: 1.1rem;
           border-radius: 15px 15px 0px 0px;
           border-top: 1px solid $color-2;
         }

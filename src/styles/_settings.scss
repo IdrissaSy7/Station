@@ -4,15 +4,15 @@
 }
 
 $color-1: #2faee0;
-$color-2: rgb(32, 32, 32);
+$color-2: #202020;
 $color-3: #f4f1eb;
 $color-4: #f2f2f2;
 $color-5: #404040;
-$color-6: rgb(68, 50, 234);
-$color-7: rgb(127, 127, 230);
+$color-6: #4432ea;
+$color-7: #7f7fe6;
 $color-8: red;
 $color-9: #1b94c4;
-$color-10: #00000047;
+$color-10: #0000006e;
 $color-11: #f76403;
 $color-12: #00b814;
 
@@ -44,7 +44,7 @@ body a {
 
   @media screen and (max-width: 767px) {
     margin: 15px 0px;
-    font-size: 1.7em;
+    font-size: 1.7rem;
   }
 }
 
@@ -56,7 +56,7 @@ body a {
     text-align: center;
     border-spacing: 0em;
     border: 1px solid $color-1;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     width: 95%;
 
     @media screen and (max-width: 767px) {
@@ -75,7 +75,7 @@ body a {
   align-items: center;
 
   i {
-    font-size: 4em;
+    font-size: 4rem;
     color: $color-1;
     margin-top: 110px;
   }

@@ -24,7 +24,7 @@
   }
 
   p,
-  ul {
+  .link {
     font-size: 1.7rem;
     text-shadow: 0px 0px 3px $color-2;
   }
@@ -45,7 +45,7 @@
     }
   }
 
-  ul {
+  .link {
     display: flex;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -62,7 +62,7 @@
       font-size: 1.2rem;
     }
 
-    li {
+    a {
       display: flex;
       color: $color-3;
       margin: 15px;
@@ -82,56 +82,40 @@
       }
 
       &:hover {
-        text-shadow: 0px 0px 10px $color-5;
-
-        #navactive1,
-        #navactive2 {
-          display: flex;
-
-          @media screen and (max-width: 767px) {
-            flex-direction: column;
-          }
-        }
-      }
-
-      .navactive {
-        font-size: 1.3rem;
-        color: $color-3;
-        background-color: $color-1;
-        padding: 0px;
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        display: none;
-        z-index: 10;
-        border-left: 1px solid $color-2;
-
-        li {
-          border-bottom: 1px solid $color-2;
-          margin: 0;
-          padding: 20px;
-
-          &:hover {
-            background-color: $color-9;
-          }
-        }
-
-        @media screen and (max-width: 767px) {
-          top: initial;
-          bottom: 80px;
-          font-size: 1.1rem;
-          border-radius: 15px 15px 0px 0px;
-          border-top: 1px solid $color-2;
-        }
-      }
-
-      #navactive1,
-      #navactive2 {
-        right: 0px;
+        text-shadow: 0px 0px 7px $color-2;
       }
 
       @media screen and (max-width: 767px) {
         flex-direction: column;
+      }
+    }
+
+    .active {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background: $color-3;
+        height: 3px;
+        width: 90%;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%) scaleX(0);
+        animation: activeanim 0.3s ease-in-out forwards;
+        transform-origin: center;
+        box-shadow: 0px 0px 1px $color-5;
+
+        @media screen and (max-width: 767px) {
+          bottom: 0px;
+          width: 130%;
+        }
+      }
+    }
+
+    @keyframes activeanim {
+      100% {
+        transform: translate(-50%) scaleX(1);
       }
     }
   }

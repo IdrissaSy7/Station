@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 const Classement = () => {
   const [data, setData] = useState([]);
+  const [data2, setData2] = useState([]);
+  const [newData, setNewData] = useState(["Ligue 1"]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -23,18 +25,53 @@ const Classement = () => {
       });
   }, []);
 
-  console.log(data);
+  useEffect(() => {
+    const options2 = {
+      method: "GET",
+      url: "https://apiligue1sy.vercel.app/classementeuro",
+    };
+
+    axios
+      .request(options2)
+      .then(function (response) {
+        setData2(response.data);
+        setIsLoading(false);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }, []);
+
+  const tableChange = (event) => {
+    const selectTable = event.target.value;
+    setNewData(selectTable);
+  };
+
+  let selectedData;
+  if (newData === "Ligue des Champions") {
+    selectedData = data2;
+  } else {
+    selectedData = data;
+  }
+
+  console.log(newData);
 
   return (
     <div>
-      <h1 className="title">Classement Ligue 1</h1>
+      <h1 className="title">Classement </h1>
+
+      <select id="select-table" onChange={tableChange}>
+        <option value="Ligue 1">Ligue 1</option>
+        <option value="Ligue des Champions">Ligue des Champions</option>
+      </select>
+
       {isLoading ? (
         <div className="loader">
           <i className="fa-solid fa-futbol fa-spin"></i>
         </div>
       ) : (
         <>
-          <div className="classement">
+          <div className={`classement ${newData}`}>
             <div className="tableau">
               <table>
                 <thead>
@@ -51,9 +88,8 @@ const Classement = () => {
                     <th>Pts.</th>
                   </tr>
                 </thead>
-
                 <tbody>
-                  {data
+                  {selectedData
                     .map((team, index) => (
                       <tr key={index}>
                         <td>{index + 1}</td>

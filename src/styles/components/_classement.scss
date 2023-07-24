@@ -114,9 +114,9 @@
         }
       }
     }
-
-    .classementeuro tr:nth-child(3) td:nth-child(1) {
-      border-left: 10px solid $color-11;
-    }
   }
+}
+
+.classement.Ligue.des.Champions tr:nth-child(3) td:nth-child(1) {
+  border-left: 10px solid $color-11;
 }

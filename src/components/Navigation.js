@@ -6,46 +6,26 @@ const Navigation = () => {
     <div className="navigation">
       <div>
         <p>
-          <i className="fa-solid fa-futbol fa-spin"></i>M Station
+          <i className="fa-solid fa-futbol"></i>M Station
         </p>
       </div>
-      <ul>
+
+      <div className="link">
         <NavLink to="/">
-          <li>
-            <i className="fa-solid fa-house-user"></i>
-            <span>Accueil</span>
-          </li>
+          <i className="fa-solid fa-house-user"></i>
+          <span>Accueil</span>
         </NavLink>
 
-        <li>
+        <NavLink to="/calendrier">
           <i className="fa-regular fa-calendar-days"></i>
           <span>Calendrier</span>
-          <ul className="navactive" id="navactive1">
-            <NavLink to="/calendrier">
-              <li>Ligue 1</li>
-            </NavLink>
-            <NavLink to="/calendrierldc">
-              <li>Ligue des Champions</li>
-            </NavLink>
-            <NavLink to="/calendriercoupe">
-              <li>Coupe de France</li>
-            </NavLink>
-          </ul>
-        </li>
+        </NavLink>
 
-        <li>
+        <NavLink to="/classement">
           <i className="fa-solid fa-ranking-star"></i>
           <span>Classement</span>
-          <ul className="navactive" id="navactive2">
-            <NavLink to="/classement">
-              <li>Ligue 1</li>
-            </NavLink>
-            <NavLink to="/classementldc">
-              <li>Ligue des Champions</li>
-            </NavLink>
-          </ul>
-        </li>
-      </ul>
+        </NavLink>
+      </div>
     </div>
   );
 };

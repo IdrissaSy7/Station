@@ -84,3 +84,23 @@ body a {
 .pages {
   margin-bottom: 80px;
 }
+
+#select-table {
+  font-size: 1.2rem;
+  background: $color-1;
+  color: $color-3;
+  font-family: "font-1", sans-serif;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  border: none;
+  box-shadow: 0 0 3px $color-2;
+  text-shadow: 0 0 3px $color-2;
+  border-radius: 25px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  margin: 0 auto 30px;
+}

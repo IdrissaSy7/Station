@@ -52,3 +52,45 @@
     }
   }
 }
+
+.custom-select:hover .option {
+  display: initial;
+}
+
+.custom-select {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "a a"
+    "b c";
+  justify-content: center;
+  justify-items: center;
+  width: 50%;
+  margin: 0 auto 50px;
+  font-size: 1.2rem;
+  background: $color-1;
+  color: $color-3;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  box-shadow: 0 0 3px $color-2;
+  text-shadow: 0 0 3px $color-2;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.option {
+  display: none;
+
+  &:nth-child(2) {
+    grid-area: b;
+  }
+
+  &:nth-child(3) {
+    grid-area: c;
+  }
+}
+
+.option.selected {
+  display: initial;
+  grid-area: a;
+}

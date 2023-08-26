@@ -7,7 +7,7 @@ const Calendrier = () => {
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
   const [data3, setData3] = useState([]);
-  const [newData, setNewData] = useState(["Ligue 1"]);
+  const [newData, setNewData] = useState("Ligue 1");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -61,9 +61,8 @@ const Calendrier = () => {
       });
   }, []);
 
-  const tableChange = (event) => {
-    const selectTable = event.target.value;
-    setNewData(selectTable);
+  const tableChange = (selectedOption) => {
+    setNewData(selectedOption);
   };
 
   let selectedData;
@@ -75,16 +74,28 @@ const Calendrier = () => {
     selectedData = data;
   }
 
+  const handleOptionClick = (option) => {
+    tableChange(option);
+  };
+
   return (
     <div>
       <Navigation />
       <h1 className="title">Calendrier</h1>
 
-      <select id="select-table" onChange={tableChange}>
-        <option value="Ligue 1">Ligue 1</option>
-        <option value="Coupe de France">Coupe de France</option>
-        <option value="Ligue des Champions">Ligue des Champions</option>
-      </select>
+      <div className="custom-select">
+        {["Ligue 1", "Coupe de France", "Ligue des Champions"].map(
+          (option, index) => (
+            <div
+              key={index}
+              className={`option ${newData === option ? "selected" : ""}`}
+              onClick={() => handleOptionClick(option)}
+            >
+              {option}
+            </div>
+          )
+        )}
+      </div>
 
       {isLoading ? (
         <div className="loader">
